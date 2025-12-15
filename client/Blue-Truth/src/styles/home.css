@@ -1,0 +1,177 @@
+.home-bg {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0a3a6a, #eaf4ff);
+  font-family: "Poppins", sans-serif;
+}
+
+.home-header {
+  background: url("/src/assets/bg.png") center / cover no-repeat;
+  padding: 20px 40px 30px;
+}
+
+.header-overlay {
+  background:transparent;
+  border-radius: 18px;
+  padding: 20px 30px 25px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+.logo {
+  font-family: "Fredoka", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.tagline {
+  color: #cce6ff;
+  opacity: 0.85;
+  font-size: 1.5rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+}
+
+.logout {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-container {
+  margin-top: 18px;
+  background: transparent;
+  border-radius: 14px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+  width: 500px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #eef4ff;
+  color: #0a3a6a;
+}
+
+.nav-btn.active {
+  background: #eef4ff;
+  color: #0a3a6a;
+}
+
+.container {
+  padding: 40px;
+}
+
+.info-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.pulse-box {
+  width: 160px;
+  height: 120px;
+  background: #eef5ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-line {
+  width: 80px;
+  height: 6px;
+  background: #2563eb;
+  border-radius: 4px;
+}
+
+.section-title {
+  text-align: center;
+  margin: 50px 0 30px;
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 2rem;;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ⬅ 2 columns */
+  gap: 30px;
+}
+
+.graph-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.graph-card h3 {
+  margin-bottom: 10px;
+}
+
+.unit {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Container to stack the buttons vertically */
+.user-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Space between buttons */
+  margin-left: 15px;
+}
+
+/* Profile Button Style (Matches .logout) */
+.profile-btn {
+  background-color: #3b82f6; /* Blue color */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+/* The Hover Effect */
+.profile-btn:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+  transform: translateY(-1px); /* Slight lift effect */
+}

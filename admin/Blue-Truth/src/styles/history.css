@@ -1,0 +1,125 @@
+/* history.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.history-page {
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+.history-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Header */
+.page-header { margin-bottom: 1.5rem;}
+.page-header h1 { font-size: 1.8rem; font-weight: 700; color: #111827; margin: 0; font-family: 'Poppins', sans-serif;}
+.page-header p { color: #6b7280; margin-top: 0.25rem; }
+
+/* Date Tabs */
+.date-tabs {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .date-tabs { grid-template-columns: repeat(3, 1fr); }
+}
+
+.date-tab {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  color: #6b7280;
+}
+
+/* Active State (Solid Blue Background) */
+.date-tab.active {
+  background-color: #2563eb; /* Blue bg */
+  border-color: #2563eb;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.4);
+}
+
+.date-tab.active .tab-date {
+  color: #dbeafe; /* Light blue text */
+}
+
+.tab-label { font-weight: 600; margin-bottom: 4px; display: flex; gap: 6px; align-items: center; }
+.tab-date { font-size: 0.8rem; }
+
+/* Summary Cards */
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .summary-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.card { padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); background: white; }
+.card-header { font-weight: 600; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; }
+.card-value { font-size: 2rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem; }
+.card-range { display: flex; justify-content: space-between; font-size: 0.75rem; color: #6b7280; margin-bottom: 0.5rem; }
+.card-status { font-size: 0.875rem; font-weight: 500; }
+
+/* Card Colors */
+.card.temp { background: #fff7ed; border: 1px solid #ffedd5; }
+.card.temp .card-header { color: #9a3412; }
+.card.temp .card-status { color: #16a34a; }
+
+.card.ph { background: #eff6ff; border: 1px solid #dbeafe; }
+.card.ph .card-header { color: #1e40af; }
+.card.ph .card-status { color: #9333ea; }
+
+.card.tox { background: #faf5ff; border: 1px solid #f3e8ff; }
+.card.tox .card-header { color: #6b21a8; }
+.card.tox .card-status { color: #dc2626; }
+
+.card.metal { background: #f0fdf4; border: 1px solid #dcfce7; }
+.card.metal .card-header { color: #166534; }
+.card.metal .card-status { color: #16a34a; }
+
+/* Table */
+.table-container {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border: 1px solid #e5e7eb;
+}
+.table-title { padding: 1rem 1.5rem; border-bottom: 1px solid #e5e7eb; font-weight: 700; color: #374151; background: #f9fafb; }
+table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; }
+thead { background: #f9fafb; color: #6b7280; text-transform: uppercase; font-size: 0.75rem; }
+th, td { padding: 1rem 1.5rem; }
+tr { border-bottom: 1px solid #f3f4f6; }
+.warning-badge { background: #fef9c3; color: #854d0e; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
+.success-badge {
+  background-color: #dcfce7;
+  color: #166534;           
+  padding: 0.125rem 0.625rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+/* Charts */
+.charts-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+@media (min-width: 1024px) { .charts-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.chart-card { background: white; padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid #e5e7eb; }
+.chart-card h3 { margin-top: 0; font-weight: 700; color: #374151; margin-bottom: 1rem; }

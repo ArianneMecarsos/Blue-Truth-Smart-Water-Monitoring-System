@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.auth-bg {
+  min-height: 100vh;
+  background: url("/src/assets/bg.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 3rem;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: #cce6ff;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.auth-card {
+  background: white;
+  padding: 35px;
+  border-radius: 14px;
+  width: 360px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.auth-card h2 {
+  margin-bottom: 20px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px 18px;       
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;  
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #1f5eff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #174ad1;
+}
+
+.switch {
+  margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.animate {
+  animation: fadeSlide 0.6s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home {
+  padding: 50px;
+}
+
+.field {
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.field label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: 600;
+}
+
+.auth-bg {
+  background-size: cover;
+  background-position: center;
+}
+
+.footer {
+  text-align: center;
+  color: #cce6ff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  margin-top: 40px;
+  padding-bottom: 20px;
+  opacity: 0.9;
+}

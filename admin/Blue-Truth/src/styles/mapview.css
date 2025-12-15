@@ -1,0 +1,213 @@
+.content-box {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  border: 1px solid #e0e0e0;
+}
+
+.map-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+
+/* --- Main Containers --- */
+.mapview-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.map-wrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  height: 500px; /* Important for map visibility */
+}
+
+.cursor-crosshair .leaflet-container {
+    cursor: crosshair !important;
+}
+
+.floating-add-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px; /* Pill shape */
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  width: auto; 
+}
+
+.floating-add-btn:hover {
+  background-color: #0056b3;
+}
+.floating-add-btn.active {
+  background-color: #dc3545;
+}
+
+/* --- Modal Styles (Global Overlay) --- */
+.modal-overlay {
+    position: fixed; /* Fixed to viewport so it floats over EVERYTHING */
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999; /* Ensure it's on top of map tiles and navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px); /* Nice blur effect */
+}
+
+.modal-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.modal-box h3 { margin-top: 0; color: #333; }
+
+.modal-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* Fixes padding width issues */
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cancel-btn, .confirm-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cancel-btn { background: #f1f3f5; color: #495057; }
+.confirm-btn { background: #007bff; color: white; }
+
+/* --- Details Section (The part that appears below map) --- */
+.area-details-container {
+    margin-top: 20px;
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp { 
+    from { opacity: 0; transform: translateY(20px); } 
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.details-header {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 8px solid #ccc;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.details-header.border-safe { border-left-color: #2ecc71; }
+.details-header.border-harmful { border-left-color: #e74c3c; }
+
+.details-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.details-top h3 { margin: 0 0 5px 0; font-size: 1.5rem; color: #333; }
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+.status-badge.safe { background: #d4edda; color: #155724; }
+.status-badge.harmful { background: #f8d7da; color: #721c24; }
+
+.details-controls { display: flex; gap: 10px; }
+
+.btn-small {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-small:hover { background: #f8f9fa; }
+.btn-danger { color: #e74c3c; border-color: #fadbd8; background: #fdedec; }
+.btn-danger:hover { background: #fceceb; }
+
+/* --- Grid Layout for Sensors --- */
+.readings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 15px;
+}
+
+.sensor-group {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.sensor-group h5 { margin: 0 0 10px 0; color: #555; border-bottom: 1px solid #eee; padding-bottom: 5px;}
+
+.grid-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.metric label {
+    display: block;
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.metric span { font-weight: 600; color: #333; font-size: 0.95rem; }
+.text-red { color: #e74c3c !important; }
+
+/* --- Risk Section --- */
+.risk-section {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px dashed #ddd;
+}
+.risk-section h4 { margin-top: 0; color: #444; }
+
+.alert-text { background: #fdedec; color: #c0392b; padding: 15px; border-radius: 6px; border: 1px solid #fadbd8;}
+.safe-text { background: #d4edda; color: #155724; padding: 15px; border-radius: 6px; border: 1px solid #c3e6cb;}
